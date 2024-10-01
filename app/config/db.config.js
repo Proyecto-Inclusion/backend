@@ -4,11 +4,12 @@ import { config } from "dotenv";
 config();
 
 const conexion = createPool({
-    host: process.env.MYSQLHOST || "db4free.net",
-    user: process.env.MYSQLUSER || "basedatos_inclusion",
-    password: process.env.MYSQLPASSWORD || "basedatos_inclusion",
+    host: process.env.MYSQLHOST ,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
     port: process.env.MYSQLPORT || 3306,
-    database: process.env.MYSQLDATABASE || "basedatos_inclusion",
+    database: process.env.MYSQLDATABASE,
+    uri: process.env.MYSQLURI,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
