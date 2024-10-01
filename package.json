@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend aplicación de Inclusion",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon app/index.js --exec babel-node",
     "build": "babel app --out-dir dist",

@@ -1,9 +1,8 @@
 import { Router } from "express";
+import rutaUser from "./routes.user.js";
 
 const rutaMain = Router();
 
-rutaMain.get("/", (req, res)=>{
-    res.send("Hola mundo");
-})
+rutaMain.use("/", rutaUser)
 
-export default rutaMain
+export default rutaMain;
