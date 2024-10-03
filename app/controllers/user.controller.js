@@ -78,7 +78,8 @@ export const logueoUsuario = async (req, res) => {
   
       const payload = {
         id_usuario: usuario.id_usuario,
-        correo: usuario.correo_usuario,
+        nombre: usuario.nombre_usuario,
+        correo: usuario.correo_usuario
       };
   
       const token = jwt.sign(payload, process.env.TOKEN_PRIVATEKEY, {
